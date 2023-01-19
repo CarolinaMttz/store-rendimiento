@@ -7,10 +7,13 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from './../material/material.module';
 import { NavComponent } from './components/nav/nav.component';
 import { BasicFormComponent } from './components/basic-form/basic-form.component';
+import { PdfComponent } from './components/pdf/pdf.component';
+import { DatesComponent } from './components/dates/dates.component';
+
 
 
 @NgModule({
-  declarations: [ NavComponent, BasicFormComponent],
+  declarations: [ NavComponent, BasicFormComponent, PdfComponent, DatesComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

@@ -1,3 +1,5 @@
+import { PdfComponent } from './components/pdf/pdf.component';
+import { DatesComponent } from './components/dates/dates.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -25,6 +27,16 @@ const routes: Routes = [
       {
         path: 'basic',
         component: BasicFormComponent
+
+      },
+      {
+        path: 'days',
+        component: DatesComponent
+
+      },
+      {
+        path: 'pdf',
+        component: PdfComponent
 
       }
     ]
