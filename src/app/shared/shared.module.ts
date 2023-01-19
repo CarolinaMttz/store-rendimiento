@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 
 import { MaterialModule } from './../material/material.module';
+import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { MaterialModule } from './../material/material.module';
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    QuicklinkModule
   ],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuicklinkModule
   ]
 })
 export class SharedModule { }
