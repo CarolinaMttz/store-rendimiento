@@ -49,6 +49,8 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.2",
+    "guess-parser": "^0.4.22",
+    "guess-webpack": "^0.4.22",
     "protractor": "~7.0.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",

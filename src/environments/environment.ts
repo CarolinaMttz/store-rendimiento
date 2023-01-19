@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_api: 'https://store.nicobytes.site/api',
+  url_api: 'https://young-sands-07814.herokuapp.com/api',
   firebase: {
     apiKey: 'AIzaSyCN599W6_flBEpe0xrcuBlGPRW3OKzDr7o',
     authDomain: 'platzi-store-forms.firebaseapp.com',
