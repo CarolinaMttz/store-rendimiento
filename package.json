@@ -23,6 +23,7 @@
     "@angular/material": "14.1.0",
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
+    "@angular/pwa": "^0.5.3",
     "@angular/router": "^14.1.0",
     "date-fns": "^2.29.3",
     "firebase": "^9.9.1",
