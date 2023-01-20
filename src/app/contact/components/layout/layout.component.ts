@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GeneratorService } from './../../../core/services/generator.service';
 import { EmployeeData } from './../../../core/models/employeeData.model';
 
@@ -8,11 +9,12 @@ const name = ['Jaime', 'Frank', 'Benito', 'Jorge'];
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, OnDestroy {
 
   salesList: EmployeeData[] = [];
   bList: EmployeeData[] = [];
-
+  value: number;
+  sub$: Subscription;
 
   constructor(
     private generatorService: GeneratorService
@@ -21,6 +23,11 @@ export class LayoutComponent implements OnInit {
   ngOnInit(): void {
     this.salesList = this.generatorService.generate( name, [10, 15], 10 );
     this.bList = this.generatorService.generate( name, [10, 15], 10 );
+    this.sub$ = this.generatorService.getData()
+    .subscribe( value => {
+      this.value = value;
+      console.log( 'value', value )
+    })
   }
 
   addItem( list: EmployeeData[], label: string){
@@ -28,6 +35,11 @@ export class LayoutComponent implements OnInit {
       label,
       num: this.generatorService.generateNumber([10, 15]),
      });//unshift para que la dejes de primera
+  }
+
+  ngOnDestroy(): void {
+    console.log('destroy');
+    this.sub$.unsubscribe();
   }
 
 }
