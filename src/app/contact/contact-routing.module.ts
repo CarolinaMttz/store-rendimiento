@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { ContactComponent } from './components/contact/contact.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { ListComponent } from './components/list/list.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ContactComponent
+    component: LayoutComponent
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes)
   ],
   exports: [
-    RouterModule
+    RouterModule,
+
   ]
 })
 export class ContactRoutingModule {}

@@ -21,9 +21,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if( isPlatformBrowser(this.platfomrId) ){
+    //if( isPlatformBrowser(this.platfomrId) ){
       this.mySwiper = new Swiper('.swiper-container');
-    }
+    //}
 
   }
 

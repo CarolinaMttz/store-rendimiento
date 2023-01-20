@@ -20,7 +20,7 @@ import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

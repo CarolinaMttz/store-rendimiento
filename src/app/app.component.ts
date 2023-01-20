@@ -16,7 +16,7 @@ export class AppComponent {
     @Inject(PLATFORM_ID) private platfomrId: any
   ){
 
-    if( isPlatformBrowser(this.platfomrId) ){
+    //if( isPlatformBrowser(this.platfomrId) ){
           const  navEndEvent$ = this.ruoter.events
                                 .pipe(
                                     filter( event => event instanceof NavigationEnd)
@@ -26,6 +26,6 @@ export class AppComponent {
               page_path: event.urlAfterRedirects
             });
           });
-    }
+   // }
   }
 }
