@@ -1,10 +1,12 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import {EmployeeData  } from './../../../core/models/employeeData.model';
+
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent implements OnInit {
 
@@ -29,5 +31,11 @@ export class ListComponent implements OnInit {
     // });
     this.label = '';
   }
+
+  // calc(item: EmployeeData){
+  //   //console.log('Calc', item.num);
+  //   console.log('list', this.title);
+  //   return fibonacci(item.num);
+  // }
 
 }
