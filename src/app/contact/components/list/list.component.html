@@ -6,7 +6,7 @@
     <mat-list-item *ngFor="let item of data">
       <h3 matline>{{item.label}}</h3>
       <mat-chip-list>
-        {{item.num}}
+        <div class="chip">{{item.num}}</div>
       </mat-chip-list>
       <button mat-raised-button>
           <mat-icon>delete</mat-icon>

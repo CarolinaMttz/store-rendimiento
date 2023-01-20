@@ -1,3 +1,12 @@
 <p>layout</p>
-<app-list title="lista1"></app-list>
-<app-list title="lista2"></app-list>
+<app-list
+  title="sales"
+  [data]="salesList"
+  (add)="addItem(salesList, $event)">
+</app-list>
+
+<app-list
+  title="lista b"
+  [data]="bList"
+  (add)="addItem(salesList, $event)">
+</app-list>
